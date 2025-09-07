@@ -1,9 +1,1 @@
-{
-  "version": 2,
-  "buildCommand": "npm install --prefix apps/web && npm run build --prefix apps/web",
-  "outputDirectory": "apps/web/dist",
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/apps/web/dist/$1" }
-  ]
-}
+
