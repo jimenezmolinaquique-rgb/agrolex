@@ -1,17 +1,15 @@
 {
   "version": 2,
   "functions": {
-    "api/stripe-webhook.ts": {
-      "runtime": "nodejs18.x",
-      "memory": 256
-    },
-    "api/export-org.ts": {
-      "runtime": "nodejs18.x",
-      "memory": 256
-    },
-    "api/eidas-callback.ts": {
-      "runtime": "nodejs18.x",
+    "api/*.ts": {
+      "runtime": "vercel-node@3",
       "memory": 256
     }
-  }
+  },
+  "buildCommand": "npm install --prefix apps/web && npm run build --prefix apps/web",
+  "outputDirectory": "apps/web/dist",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/apps/web/dist/$1" }
+  ]
 }
