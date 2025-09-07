@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.ts": {
-      "runtime": "vercel-node@3",
-      "memory": 256
-    }
-  },
   "buildCommand": "npm install --prefix apps/web && npm run build --prefix apps/web",
   "outputDirectory": "apps/web/dist",
   "rewrites": [
