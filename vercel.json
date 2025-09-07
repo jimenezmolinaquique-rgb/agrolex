@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "functions": {
+    "api/stripe-webhook.ts": {
+      "runtime": "nodejs18.x",
+      "memory": 256
+    },
+    "api/export-org.ts": {
+      "runtime": "nodejs18.x",
+      "memory": 256
+    },
+    "api/eidas-callback.ts": {
+      "runtime": "nodejs18.x",
+      "memory": 256
+    }
+  }
+}
